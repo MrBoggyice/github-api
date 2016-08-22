@@ -1,0 +1,19 @@
+{
+  "name": "github-api",
+  "version": "1.0.0",
+  "description": "github api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrBoggyice/github-api.git"
+  },
+  "author": "fortune",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrBoggyice/github-api/issues"
+  },
+  "homepage": "https://github.com/MrBoggyice/github-api#readme"
+}
