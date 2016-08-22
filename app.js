@@ -5,8 +5,6 @@ var request = require('request');
 var readline = require('readline');
 var apiToken = process.env.API_TOKEN;
 
-
-// initailisation
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -43,7 +41,7 @@ rl.question('Enter your github username:', function(username){
                 url: url,
                   headers: {
                     'User-Agent': 'request',
-                    'Authorization' :apiToken
+                    'Authorization': 'token ' + apiToken
                 },
                 form: JSON.stringify({
                     "description":"Gist Created via API",
