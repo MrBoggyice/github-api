@@ -13,9 +13,9 @@ const rl = readline.createInterface({
 /**
  * Request's user input
  */
-rl.question('Enter your github username: ', function(username){
-    var url = 'https://api.github.com/users/' + username + "/repos";
-    var options = {
+rl.question('Enter your github username: ', (username) => {
+    const url = 'https://api.github.com/users/' + username + "/repos";
+    const options = {
             url: url,
               headers: {
                 'User-Agent': 'request'
@@ -24,7 +24,7 @@ rl.question('Enter your github username: ', function(username){
     /**
      * GETs user's repositories
      */
-    request.get(options, function (error, response, body) {
+    request.get(options, (error, response, body) => {
         if (!error && response.statusCode == 200) {
             console.log(JSON.parse(response.body)[1])
         }
@@ -34,9 +34,9 @@ rl.question('Enter your github username: ', function(username){
             /**
              * Request's user input
              */
-            rl.question('create a gist content: ', function(gistContent) {
-                var url = 'https://api.github.com/gists/';
-                var options = {
+            rl.question('create a gist content: ', (gistContent) => {
+                const url = 'https://api.github.com/gists/';
+                const options = {
                         url: url,
                           headers: {
                             'User-Agent': 'request',
@@ -56,7 +56,7 @@ rl.question('Enter your github username: ', function(username){
                 /**
                  * POSTS a gist
                  */
-                request.post(options, function (error, response, body) {
+                request.post(options, (error, response, body) => {
                     if (!error) {
                       console.log('post request sent');
                       console.log(response.body);
