@@ -1,11 +1,11 @@
 /**
  * Require Dependecies
  */
-var request = require('request');
-var readline = require('readline');
-var apiToken = process.env.API_TOKEN;
+const request = require('request');
+const readline = require('readline');
+const apiToken = process.env.API_TOKEN;
 
-var rl = readline.createInterface({
+const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 })

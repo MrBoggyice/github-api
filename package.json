@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MrBoggyice/github-api/issues"
   },
-  "homepage": "https://github.com/MrBoggyice/github-api#readme"
+  "homepage": "https://github.com/MrBoggyice/github-api#readme",
+  "dependencies": {
+    "request": "^2.79.0"
+  }
 }
