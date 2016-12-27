@@ -1,6 +1,6 @@
-// /*
-// * Require Dependecies
-// */
+/**
+ * Require Dependecies
+ */
 var request = require('request');
 var readline = require('readline');
 var apiToken = process.env.API_TOKEN;
@@ -10,9 +10,9 @@ var rl = readline.createInterface({
   output: process.stdout
 })
 
-/*
-* Request's user input
-*/
+/**
+ * Request's user input
+ */
 rl.question('Enter your github username: ', function(username){
     var url = 'https://api.github.com/users/' + username + "/repos";
     var options = {
@@ -21,9 +21,9 @@ rl.question('Enter your github username: ', function(username){
                 'User-Agent': 'request'
               }
           }
-    /*
-    * GETs user's repositories
-    */
+    /**
+     * GETs user's repositories
+     */
     request.get(options, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             console.log(JSON.parse(response.body)[1])
@@ -31,9 +31,9 @@ rl.question('Enter your github username: ', function(username){
 
         // Runs after response body exists
         if(response.body){
-            /*
-            * Request's user input
-            */
+            /**
+             * Request's user input
+             */
             rl.question('create a gist content: ', function(gistContent) {
                 var url = 'https://api.github.com/gists/';
                 var options = {
@@ -53,9 +53,9 @@ rl.question('Enter your github username: ', function(username){
                             })
                         }
 
-                /*
-                * POSTS a gist
-                */
+                /**
+                 * POSTS a gist
+                 */
                 request.post(options, function (error, response, body) {
                     if (!error) {
                       console.log('post request sent');
